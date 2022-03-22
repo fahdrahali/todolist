@@ -8,4 +8,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
+  devServer: {
+    static: './dist',
+  },
 };
