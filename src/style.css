@@ -8,14 +8,14 @@
 }
 
 body {
-    background-color: #eceef1;
+    background-color: #f5f6f6;
 }
 
 .todolist {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 2px solid #e40d0d;
+    border: 2px solid #a19f9f;
     list-style: none;
     margin-top: 100px;
     margin-right: 100px;
