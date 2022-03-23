@@ -23,6 +23,18 @@ const tasks = [
   },
 ];
 
+const getTaskItemList = () => {
+  let taskItemList = '';
+  tasks.map((task) => {
+    taskItemList += `<li>
+          <input type="checkbox" id=${task.index}>
+          <label for=${task.index}>${task.description}</label>
+      </li>`;
+    return task;
+  });
+  return taskItemList;
+};
+
 const render = () => {
   const taskListContainer = document.createElement('ul');
   taskListContainer.className = 'todolist';
@@ -34,15 +46,8 @@ const render = () => {
   </li>
   `;
 
-  let taskListItem = '';
-  tasks.map((task) => {
-    taskListItem += `<li>
-          <input type="checkbox" id=${task.index}>
-          <label for=${task.index}>${task.description}</label>
-      </li>`;
-    return task;
-  });
-  taskListContainer.innerHTML += taskListItem;
+  taskListContainer.innerHTML += getTaskItemList();
+
   taskListContainer.innerHTML += `<li class="clear">
   <a>Clear all completed</a>
   </li>`;
