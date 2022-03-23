@@ -1,64 +1,61 @@
 @import url('http://fonts.cdnfonts.com/css/lato');
 
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f5f6f6;
+  background-color: #f5f6f6;
 }
 
 .todolist {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 2px solid #a19f9f;
-    list-style: none;
-    margin-top: 100px;
-    margin-right: 100px;
-    width: 60%;
-    font-size: 25px;
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    color:  #1f1e1e;
-    background-color: #fff;
-    margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #a19f9f;
+  list-style: none;
+  width: 60%;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  color: #1f1e1e;
+  background-color: #fff;
+  margin: 200px auto;
 }
 
-.todolist li input[type=checkbox]{
+.todolist li input[type=checkbox] {
   width: 22px;
   height: 22px;
   margin-right: 20px;
 }
 
 .todolist li {
-    width: 100%;
-    border-bottom: 1px solid #bebcbc;
-    padding: 20px;
+  width: 100%;
+  border-bottom: 1px solid #bebcbc;
+  padding: 20px;
 }
 
 .clear {
-    text-align: center;
-    background-color: #eeecec;
-    color: #918e8e;
+  text-align: center;
+  background-color: #eeecec;
+  color: #918e8e;
 }
 
-.todolist li a{
-   font-size: 25px;
+.todolist li a {
+  font-size: 25px;
 }
 
-.todolist li:nth-of-type(2){
-    padding: 0;
+.todolist li:nth-of-type(2) {
+  padding: 0;
 }
 
-.todolist li input{
-    color:  #1f1e1e;
-    font-style: italic;
-    width: 100%;
-    font-size: 25px;
-    border: none;
-    padding: 20px;
-
+.todolist li input {
+  color: #1f1e1e;
+  font-style: italic;
+  width: 100%;
+  font-size: 25px;
+  border: none;
+  padding: 20px;
 }
