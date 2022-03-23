@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../src/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <title>TodoList</title>
 <script defer src="main.js"></script></head>
 <body>
-    <h1>ToDo List!</h1>
-    <ul class="todolist">
-        <li>Today's To Do</li>
-        <li>
-            <input type="checkbox" id="wash" name="wash">
-            <label for="wash">Wash the dishes</label>
-        </li>
-        <li>
-            <input type="checkbox" id="project" name="project">
-            <label for="project">complete todo list project</label>
-        </li>
-        <li><button>Clear all completed</button></li>
-    </ul>
+    <main id="container">
+        <ul class="todolist">
+            <li>Today's To Do</li>
+            <li>
+                <input type='text' name='task' id='task' placeholder='Add to your list...'>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>
