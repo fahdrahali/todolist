@@ -34,8 +34,8 @@ const editTask = () => {
     dotsIcon.addEventListener('click', () => {
       dotsIcon.style.display = 'none';
       removeIconTab[index].style.display = 'block';
-      inputTaskTab[index].style.backgroundColor = 'yellow';
-      item[index].style.backgroundColor = 'yellow';
+      inputTaskTab[index].style.backgroundColor = '#fcf6aa';
+      item[index].style.backgroundColor = '#fcf6aa';
       inputTaskTab[index].style.pointerEvents = 'auto';
       inputTaskTab[index].focus();
       inputTaskTab[index].addEventListener('keypress', (e) => {
@@ -53,6 +53,10 @@ const editTask = () => {
         }
       });
     });
+      dotsIcon.style.display = 'block';
+      removeIconTab[index].style.display = 'none';
+      inputTaskTab[index].style.backgroundColor = 'white';
+      item[index].style.backgroundColor = 'white';
   });
 };
 
