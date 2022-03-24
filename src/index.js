@@ -1,5 +1,7 @@
 import './style.css';
-import { addTask, initTasks, editTask, removeTask } from '../modules/handleTask.js';
+import {
+  addTask, initTasks, editTask, removeTask,
+} from '../modules/handleTask.js';
 import threeDotsIcon from '../assets/icons/tripledots.jpg';
 import removeIcon from '../assets/icons/remove-icon.png';
 

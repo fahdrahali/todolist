@@ -46,7 +46,8 @@ body {
 }
 
 .todolist li a {
-  font-size: 25px;
+  width: 100%;
+  font-size: 30px;
 }
 
 .todolist li:nth-of-type(2) {
@@ -63,18 +64,13 @@ body {
   background-color: #fff;
 }
 
-.todolist li a{ 
-  width: 100%;
-  font-size: 30px;
-}
-
 .dotsIcon {
   align-self: center;
   width: 5%;
   height: 5%;
 }
 
-.todolist li label{ 
+.todolist li label {
   width: 100%;
 }
 
