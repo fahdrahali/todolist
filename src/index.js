@@ -1,9 +1,10 @@
 import './style.css';
-import tasks from '../modules/tasks.js';
+import { addTask, initTasks } from '../modules/handleTask.js';
 
 const render = () => {
+  const tasks = initTasks();
   const taskListContainer = document.querySelector('.todolist');
-  tasks.map((task) => {
+  tasks.taskList.map((task) => {
     taskListContainer.innerHTML += `<li>
           <input type="checkbox" id=${task.index}>
           <label for=${task.index}>${task.description}</label>
@@ -16,3 +17,4 @@ const render = () => {
 };
 
 render();
+addTask();

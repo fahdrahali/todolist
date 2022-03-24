@@ -1,4 +1,7 @@
-const tasks = [
-];
+class Tasks {
+  constructor(tasks) {
+    this.taskList = tasks;
+  }
+}
 
-export default tasks;
+export default Tasks;
