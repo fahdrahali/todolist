@@ -2,6 +2,7 @@ import './style.css';
 import {
   addTask, initTasks, editTask, removeTask,
 } from '../modules/handleTask.js';
+import updateTaskStatus from '../modules/taskStatus.js';
 import threeDotsIcon from '../assets/icons/tripledots.jpg';
 import removeIcon from '../assets/icons/remove-icon.png';
 
@@ -10,7 +11,7 @@ const render = () => {
   const taskListContainer = document.querySelector('.todolist');
   tasks.taskList.forEach((task) => {
     taskListContainer.innerHTML += `<li class='itemTask'>
-          <input type="checkbox" id=${task.index}>
+          <input type="checkbox" class="checkboxTask" id=${task.index}>
           <label for=${task.index}>
           <input class='inputTask' type='text' name='task' id='task' 
           value='${task.description}'>
@@ -28,3 +29,4 @@ render();
 addTask();
 editTask();
 removeTask();
+updateTaskStatus();
