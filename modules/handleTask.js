@@ -53,10 +53,6 @@ const editTask = () => {
         }
       });
     });
-    dotsIcon.style.display = 'block';
-    removeIconTab[index].style.display = 'none';
-    inputTaskTab[index].style.backgroundColor = 'white';
-    item[index].style.backgroundColor = 'white';
   });
 };
 
