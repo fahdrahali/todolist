@@ -25,4 +25,33 @@ const addTask = () => {
   });
 };
 
-export { addTask, initTasks };
+const editTask = () => {
+  const dotsIconTab = document.querySelectorAll('.dotsIcon');
+  const inputTaskTab = document.querySelectorAll('.inputTask');
+  const item = document.querySelectorAll('.itemTask');
+  dotsIconTab.forEach((dotsIcon, index) => {
+    dotsIcon.addEventListener('click', () => {
+      dotsIcon.style.display = 'none';
+      inputTaskTab[index].style.backgroundColor = 'yellow';
+      item[index].style.backgroundColor = 'yellow';
+      inputTaskTab[index].style.pointerEvents = 'auto';
+      inputTaskTab[index].focus();
+      inputTaskTab[index].addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          const tasks = initTasks();
+          tasks.taskList.map((task) => {
+            if ((task.index - 1) === index) {
+              task.description = inputTaskTab[index].value;
+              return task;
+            }
+            return task;
+          });
+          localStorage.setItem('tasksData', JSON.stringify(tasks));
+          window.location.reload();
+        }
+      });
+    });
+  });
+};
+
+export { addTask, initTasks, editTask };
