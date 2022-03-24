@@ -1,6 +1,7 @@
 import './style.css';
-import { addTask, initTasks, editTask } from '../modules/handleTask.js';
+import { addTask, initTasks, editTask, removeTask } from '../modules/handleTask.js';
 import threeDotsIcon from '../assets/icons/tripledots.jpg';
+import removeIcon from '../assets/icons/remove-icon.png';
 
 const render = () => {
   const tasks = initTasks();
@@ -13,6 +14,7 @@ const render = () => {
           value='${task.description}'>
           </label>
           <img class='dotsIcon' src=${threeDotsIcon}/>
+          <img class='removeIcon' src=${removeIcon}/>
       </li>`;
   });
   taskListContainer.innerHTML += `<li class="clear">
@@ -23,3 +25,4 @@ const render = () => {
 render();
 addTask();
 editTask();
+removeTask();

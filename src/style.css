@@ -85,3 +85,10 @@ body {
 .inputTask {
   pointer-events: none;
 }
+
+.removeIcon {
+  display: none;
+  align-self: center;
+  width: 4%;
+  height: 4%;
+}

@@ -29,9 +29,11 @@ const editTask = () => {
   const dotsIconTab = document.querySelectorAll('.dotsIcon');
   const inputTaskTab = document.querySelectorAll('.inputTask');
   const item = document.querySelectorAll('.itemTask');
+  const removeIconTab = document.querySelectorAll('.removeIcon');
   dotsIconTab.forEach((dotsIcon, index) => {
     dotsIcon.addEventListener('click', () => {
       dotsIcon.style.display = 'none';
+      removeIconTab[index].style.display = 'block';
       inputTaskTab[index].style.backgroundColor = 'yellow';
       item[index].style.backgroundColor = 'yellow';
       inputTaskTab[index].style.pointerEvents = 'auto';
@@ -54,4 +56,24 @@ const editTask = () => {
   });
 };
 
-export { addTask, initTasks, editTask };
+const removeTask = () => {
+  const removeIconTab = document.querySelectorAll('.removeIcon');
+  removeIconTab.forEach((removeIcon, index) => {
+    removeIcon.addEventListener('click', () => {
+      const tasks = initTasks();
+      const newTasks = new Tasks([]);
+      newTasks.taskList = tasks.taskList.filter((task) => (task.index - 1) !== index);
+      let newIndex = 1;
+      newTasks.taskList.map((task) => {
+        task.index = newIndex;
+        newIndex += 1;
+        return task;
+      });
+      localStorage.setItem('tasksData', JSON.stringify(newTasks));
+      window.location.reload();
+    });
+  });
+};
+export {
+  addTask, initTasks, editTask, removeTask,
+};
