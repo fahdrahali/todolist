@@ -74,6 +74,24 @@ const removeTask = () => {
     });
   });
 };
+
+const clearAllCompleted = () => {
+  const clearAllBtn = document.getElementsByTagName('a');
+  clearAllBtn[0].addEventListener('click', () => {
+    const tasks = initTasks();
+    console.log(tasks);
+    let newTasks = new Tasks([]);
+    newTasks.taskList = tasks.taskList.filter((task) => task.completed !== true);
+    let count = 1;
+    newTasks.taskList.map((task) => {
+      task.index = count;
+      count += 1;
+    });
+    localStorage.setItem('tasksData', JSON.stringify(newTasks));
+    window.location.reload();
+  });
+};
+
 export {
-  addTask, initTasks, editTask, removeTask,
+  addTask, initTasks, editTask, removeTask, clearAllCompleted,
 };

@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  addTask, initTasks, editTask, removeTask,
+  addTask, initTasks, editTask, removeTask, clearAllCompleted,
 } from '../modules/handleTask.js';
 import updateTaskStatus from '../modules/taskStatus.js';
 import threeDotsIcon from '../assets/icons/tripledots.jpg';
@@ -21,7 +21,7 @@ const render = () => {
       </li>`;
   });
   taskListContainer.innerHTML += `<li class="clear">
-  <a>Clear all completed</a>
+  <a class='clearBtn'>Clear all completed</a>
   </li>`;
 };
 
@@ -30,3 +30,4 @@ addTask();
 editTask();
 removeTask();
 updateTaskStatus();
+clearAllCompleted();
