@@ -22,7 +22,6 @@ const updateTaskStatus = () => {
           }
           return task;
         });
-        console.log(tasks);
         localStorage.setItem('tasksData', JSON.stringify(tasks));
       });
     });
