@@ -1,0 +1,96 @@
+@import url('http://fonts.cdnfonts.com/css/lato');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6f6;
+}
+
+.todolist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #a19f9f;
+  list-style: none;
+  width: 60%;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  color: #1f1e1e;
+  background-color: #fff;
+  margin: 200px auto;
+}
+
+.todolist li input[type=checkbox] {
+  align-self: center;
+  width: 22px;
+  height: 22px;
+  margin: 0 5px;
+}
+
+.todolist li {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #bebcbc;
+  padding: 20px;
+}
+
+.clear {
+  text-align: center;
+  background-color: #eeecec;
+  color: #918e8e;
+}
+
+.todolist li a {
+  width: 100%;
+  font-size: 30px;
+}
+
+.todolist li:nth-of-type(2) {
+  padding: 0;
+}
+
+.todolist li input {
+  color: #1f1e1e;
+  font-style: italic;
+  width: 100%;
+  border: none;
+  font-size: 25px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.todolist li input:focus {
+  outline: none;
+}
+
+.dotsIcon {
+  align-self: center;
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+
+.todolist li label {
+  width: 100%;
+}
+
+.bg-color-yellow {
+  background-color: yellow;
+}
+
+.inputTask {
+  pointer-events: none;
+}
+
+.removeIcon {
+  display: none;
+  align-self: center;
+  width: 4%;
+  height: 4%;
+  cursor: pointer;
+}
