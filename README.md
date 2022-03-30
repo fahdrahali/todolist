@@ -1,5 +1,4 @@
-# Awesome Books Collection
-
+# ToDo List
 > A basic ToDolist app.
 
 ## Getting Started
